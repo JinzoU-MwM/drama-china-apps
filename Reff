@@ -1,0 +1,96 @@
+GET
+Daftar Rekomendasi
+foryou
+Uji Endpoint
+Mengambil daftar drama rekomendasi utama.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/foryou/1?lang=in"
+GET
+Rilis Terbaru
+newlist
+Uji Endpoint
+Daftar drama yang baru saja dirilis.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/new/1?lang=in&pageSize=10"
+GET
+Peringkat Populer
+rank
+Uji Endpoint
+Daftar drama paling populer saat ini.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/rank/1?lang=in"
+GET
+Filter & Klasifikasi
+classify
+Uji Endpoint
+Filter drama berdasarkan Genre/Kategori.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/classify?lang=in&pageNo=1&genre=1357&sort=1"
+GET
+Pencarian
+search
+Uji Endpoint
+Mencari drama berdasarkan kata kunci.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/search/ceo/1?lang=in"
+GET
+Saran Pencarian
+suggest
+Uji Endpoint
+Auto-complete saran kata kunci.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/suggest/cinta?lang=in"
+GET
+Daftar Episode
+chapters
+Uji Endpoint
+Mengambil daftar seluruh episode.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/chapters/42000000722?lang=in"
+GET
+Detail Episode
+chaptersDetail
+Uji Endpoint
+Mengambil detail lengkap seluruh episode.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/chapters/detail/42000000722?lang=in"
+GET
+Stream Video (GET)
+watch
+Uji Endpoint
+Link streaming video episode tertentu.
+
+
+Salin
+curl -X GET "https://sapi.dramabox.be/api/watch/42000000722/0?lang=in&source=search_result"
+POST
+Stream Player (POST)
+player
+Uji Endpoint
+Alternatif streaming dengan JSON body.
+
+
+Salin
+curl -X POST "https://sapi.dramabox.be/api/watch/player?lang=in"
+-H "Content-Type: application/json"
+-d '{
+    "bookId": "42000000722",
+    "chapterIndex": 10,
+    "lang": "in"
+}'
